@@ -2,6 +2,8 @@
 
 Create an image (no more than 2MB) with a Golang script that prints "Full Cycle Rocks"
 
+https://hub.docker.com/repository/docker/guilhermewelter/small-go
+
 ## Challenge 2
 
 Nginx server with reversed proxy pointing to a nodejs server.
