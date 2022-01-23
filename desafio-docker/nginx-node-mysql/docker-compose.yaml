@@ -7,10 +7,9 @@ services:
     image: guilhermewelter/desafio-node
     container_name: node
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
+    command: ["node", "index.js"]
     networks:
       - node-network
-    ports:
-      - "3000:3000"
     volumes:
       - ./node:/usr/src/app
       - /usr/src/app/node_modules
@@ -45,8 +44,6 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     networks:
       - node-network
-    ports:
-      - "3306:3306"
 
 networks:
   node-network:

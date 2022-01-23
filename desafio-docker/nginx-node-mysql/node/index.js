@@ -53,8 +53,7 @@ function getRandomName(names) {
 
 async function saveNameToDB(name) {
   const sql = `INSERT INTO people (name) values ('${name}')`;
-  const rows = await db.query(sql);
-  console.log({ rows });
+  await db.query(sql);
 }
 
 async function getNamesFromDB() {
